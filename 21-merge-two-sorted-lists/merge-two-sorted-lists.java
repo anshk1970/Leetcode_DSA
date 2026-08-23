@@ -1,4 +1,3 @@
-
 class Solution {
     public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
         ListNode i = list1;
@@ -18,6 +17,7 @@ class Solution {
         }
         if(i==null) k.next = j;
         else k.next = i;
+        
         return dummy.next;
     }
 }
