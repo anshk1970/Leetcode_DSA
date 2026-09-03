@@ -1,20 +1,19 @@
 class Solution {
     public ListNode oddEvenList(ListNode head) {
-     ListNode odd = new ListNode(0);
-     ListNode even = new ListNode(0);
-     ListNode t1 = odd;
-     ListNode t2 = even;
-     ListNode temp = head;
-    while(temp!=null){
-        t1.next = temp;
-        temp = temp.next;
-        t1 = t1.next;
-        
-        t2.next = temp;
-        if(temp!=null) temp = temp.next;
-        t2 = t2.next;
-    }
-    t1.next =even.next;
-    return odd.next;
+        ListNode odd = new ListNode(-1);
+        ListNode even = new ListNode(-1);
+        ListNode tempOdd = odd;
+        ListNode tempEven = even;
+        ListNode temp = head;
+        while(temp!=null){
+            tempOdd.next = temp;
+            temp = temp.next;
+            tempOdd = tempOdd.next;
+            tempEven.next = temp;
+            if(temp!=null) temp = temp.next;
+            tempEven = tempEven.next;
+        }
+        tempOdd.next = even.next;
+        return odd.next;
     }
 }
