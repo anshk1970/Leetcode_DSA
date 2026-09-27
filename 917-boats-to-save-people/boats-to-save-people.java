@@ -4,6 +4,7 @@ class Solution {
         int start = 0;
         int end = people.length-1;
         int count = 0;
+        
         while(start<=end){
             if(people[start]+people[end]<=limit){
                 start++;
@@ -14,6 +15,7 @@ class Solution {
             }
             count++;
         }
+
         return count;
     }
 }
