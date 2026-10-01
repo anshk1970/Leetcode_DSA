@@ -1,5 +1,6 @@
 
 class Solution {
+
     public List<Integer> postorderTraversal(TreeNode root) {
         ArrayList<Integer> ans = new ArrayList<>();
         dfs(root,ans);
@@ -11,4 +12,5 @@ class Solution {
         dfs(root.right,ans);
         ans.add(root.val);
     }
+    
 }
