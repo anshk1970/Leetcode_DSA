@@ -5,8 +5,8 @@ class Solution {
         ans.add(root.val);
         dfs(root.left);
         dfs(root.right);
-
     }
+    
     public List<Integer> preorderTraversal(TreeNode root) {
         ans = new ArrayList<>();
         dfs(root);
