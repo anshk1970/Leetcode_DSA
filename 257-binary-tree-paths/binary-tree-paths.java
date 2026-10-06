@@ -6,19 +6,10 @@ class Solution {
         }
         return result;
     }
-    
     private void dfs(TreeNode node, String currentPath, List<String> result) {
-
-        if (node == null) {
-            return;
-        }
-        
-        if (currentPath.isEmpty()) {
-            currentPath += node.val;
-        } else {
-            currentPath += "->" + node.val;
-        }
-        
+        if (node == null) return;
+        if (currentPath.isEmpty()) currentPath += node.val;
+        else currentPath += "->" + node.val;
         if (node.left == null && node.right == null) {
             result.add(currentPath);
             return;
