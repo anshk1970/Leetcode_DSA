@@ -8,9 +8,8 @@ class Solution {
             if ((long) mid * mid <= x) {
                 ans = mid;
                 low = mid + 1;
-            } else {
-                high = mid - 1;
-            }
+            } 
+            else high = mid - 1;
         }
         return ans;
     }
